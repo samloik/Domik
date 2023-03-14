@@ -11,3 +11,10 @@
     cd Domik
 
     pip install -r requirements.txt
+
+
+ Пример использования:
+
+ from domik import get_phone_number
+
+ print(get_phone_number('709088'))
