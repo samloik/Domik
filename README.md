@@ -7,9 +7,7 @@
  неверные запросы и блокирует авторизацию по IP адресу на некоторое время (около часа).
 
 
-
-    pip install -r requirements.txt
-
     git clone https://github.com/samloik/Domik.git
     cd Domik
 
+    pip install -r requirements.txt
