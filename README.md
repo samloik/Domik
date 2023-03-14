@@ -12,6 +12,12 @@
 
     pip install -r requirements.txt
 
+    python ./parse_page_domik.py
+
+
+
+
+
 
  Пример использования:
 
