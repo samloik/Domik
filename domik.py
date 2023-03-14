@@ -11,7 +11,9 @@ import requests
 from loguru import logger
 
 def get_cookies(id):
-    cookies = {}
+    cookies = {
+    }
+
     headers = {}
 
     url = 'https://domik65.ru/api/offer/' + id
@@ -43,6 +45,11 @@ def get_phone_number(id):
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
         'authorization': 'Bearer ' + jwt,
+    }
+
+    cookies = {
+        'sakhcomid': 'qYEhRKiWdZhIm2Ye4M3VZH1wBLeIqb7NZc77vcJXw3Bt14DoGae_rJTL-9aHTQpI',
+        'jwt_oauth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJzYWtoLmNvbSIsImlhdCI6MTY3ODc1NTU4NSwiZXhwIjoxNjg2NTMxNTg1LCJqdGkiOiI1NDNPZXpEOGVjbXk1WS1KeTZGTV9WTHB6LUV4U2lPejJDNWVUUkNjLUZZIiwidHlwZSI6InVzZXIiLCJyZW1lbWJlciI6dHJ1ZSwidXNlcl9pZCI6IjcxMjU1OCJ9.kRPqOgfRRJ5QhOmg9jH9zv7XkhH0f7u6FVq9DHHnoR-XmA2iwgP2j9Jx0xdtxny9',
     }
 
     if jwt and not jwt == '':
