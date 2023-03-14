@@ -8,8 +8,7 @@
 
 
 
-    pip install requests
-
+    pip install -f requests.txt
 
     git clone https://github.com/samloik/Domik.git
 
