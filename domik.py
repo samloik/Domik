@@ -35,7 +35,7 @@ def get_cookies(id):
 
     return jwt, cookies
 
-
+from secrets import cookies as secret_cokies
 @logger.catch
 def get_phone_number(id):
     jwt, cookies = get_cookies(str(id))
@@ -47,14 +47,9 @@ def get_phone_number(id):
         'authorization': 'Bearer ' + jwt,
     }
 
-    cookies = {
-        'sakhcomid': 'qYEhRKiWdZhIm2Ye4M3VZH1wBLeIqb7NZc77vcJXw3Bt14DoGae_rJTL-9aHTQpI',
-        'jwt_oauth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJpc3MiOiJzYWtoLmNvbSIsImlhdCI6MTY3ODc1NTU4NSwiZXhwIjoxNjg2NTMxNTg1LCJqdGkiOiI1NDNPZXpEOGVjbXk1WS1KeTZGTV9WTHB6LUV4U2lPejJDNWVUUkNjLUZZIiwidHlwZSI6InVzZXIiLCJyZW1lbWJlciI6dHJ1ZSwidXNlcl9pZCI6IjcxMjU1OCJ9.kRPqOgfRRJ5QhOmg9jH9zv7XkhH0f7u6FVq9DHHnoR-XmA2iwgP2j9Jx0xdtxny9',
-    }
-
     if jwt and not jwt == '':
         url = f'https://domik65.ru/api/offer/{id}/contact'
-        response = requests.get(url, cookies=cookies, headers=headers)
+        response = requests.get(url, cookies=secret_cokies, headers=headers)
 
         if response.status_code == 200:
             try:

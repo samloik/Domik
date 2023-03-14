@@ -70,6 +70,8 @@ def test():
         print(f'[{x:5}] Контакт: [{contact}] тел: {get_phone_number(contact)}')
 
 
+# 80.83.234.146
+
 if __name__ == '__main__':
     test()
 
