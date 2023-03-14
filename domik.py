@@ -22,7 +22,6 @@ def get_cookies(id):
     if response.status_code == 200:
         try:
             res = response.json()
-            # print(f'get_cookies(id): {response.json()=}')
             jwt = res['data']['jwt']
             cookies = response.cookies
         except Exception as Err:

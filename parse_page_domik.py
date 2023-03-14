@@ -1,4 +1,4 @@
-# пример применение
+# пример применения
 
 
 from domik import get_phone_number
@@ -6,9 +6,9 @@ from domik import get_phone_number
 
 def test():
 
-    list_contacts = ['709088', '584930', '420560', '713567']
+    contacts = ['709088', '584930', '420560', '713567', '199781', '717797']
 
-    for contact in list_contacts:
+    for contact in contacts:
         print(f'Контакт: [{contact}] тел: [{get_phone_number(contact)}]')
 
 
