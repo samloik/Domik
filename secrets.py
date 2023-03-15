@@ -1,5 +1,5 @@
 
-# cекретные куки не должнылежать на github
+# cекретные куки не должны лежать на github
 
 cookies = {
     'sakhcomid': 'qYEhRKiWdZhIm2Ye4M3VZH1wBLeIqb7NZc77vcJXw3Bt14DoGae_rJTL-9aHTQpI',
