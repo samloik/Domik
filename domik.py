@@ -39,7 +39,7 @@ def get_phone_number(id):
         'authorization': 'Bearer ' + jwt,
     }
 
-    if jwt and not jwt == '':
+    if not jwt == '':
         url = f'https://domik65.ru/api/offer/{id}/contact'
         response = requests.get(url, cookies=secret_cokies, headers=headers)
         if response.status_code == 200:
